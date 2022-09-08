@@ -17,18 +17,34 @@
                         <div class="flex flex-col space-y-6 px-4 py-2">
                             <label class="block">
                                 <input type="text" id="name" name="name"
-                                    class=" rounded-lg mt-1 block w-full" placeholder="Name">
+                                    class=" rounded-lg mt-1 block w-full" placeholder="Name" value="{{ old('name') }}">
+                                    @error('name')
+                                        <span style="color: red;">{{ $message }}</span>
+                                    @enderror
                             </label>
                             <div class="flex gap-4">
                                 <label class="block w-full">
                                     <input id="start_date" type="text" name="start_date"
-                                        class="rounded-lg mt-1 block w-full" placeholder="Start Date">
+                                        class="rounded-lg mt-1 block w-full" placeholder="Start Date (YYYY-MM-DD)" value="{{ old('start_date') }}">
+                                        @error('start_date')
+                                            <span style="color: red;">{{ $message }}</span>
+                                        @enderror
                                 </label>
                                 <label class="block w-full">
                                     <input id="end_date" type="text" name="end_date"
-                                        class="rounded-lg mt-1 block w-full" placeholder="End Date">
+                                        class="rounded-lg mt-1 block w-full" placeholder="End Date (YYYY-MM-DD)" value="{{ old('end_date') }}">
+                                        @error('end_date')
+                                            <span style="color: red;">{{ $message }}</span>
+                                        @enderror
                                 </label>
                             </div>
+
+                            <label class="block">
+                                <textarea class="textarea-note" id="note" name="note" placeholder="Input event notes ...">{{ old('note' )}}</textarea>
+                                @error('note')
+                                    <span style="color: red;">{{ $message }}</span>
+                                @enderror
+                            </label>
                         </div>
                     </div>
                 </div>

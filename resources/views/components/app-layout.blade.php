@@ -7,7 +7,13 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
     <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
-
+    <style>
+        .textarea-note {
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 
 <body class="min-h-screen bg-gray-200 flex flex-col">
